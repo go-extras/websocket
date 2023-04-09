@@ -1195,13 +1195,6 @@ func (c *Conn) NetConn() net.Conn {
 	return c.conn
 }
 
-// UnderlyingConn returns the internal net.Conn. This can be used to further
-// modifications to connection specific flags.
-// Deprecated: Use the NetConn method.
-func (c *Conn) UnderlyingConn() net.Conn {
-	return c.conn
-}
-
 // EnableWriteCompression enables and disables write compression of
 // subsequent text and binary messages. This function is a noop if
 // compression was not negotiated with the peer.
