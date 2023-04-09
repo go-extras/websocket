@@ -25,14 +25,26 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v2
-        with:
-          path: go/src/github.com/go-extras/websocket
 
       - name: Print the Go version
         run: go version
 
       - name: Install dependencies
-        run: go mod download
+        run: |
+          set +e
+          output=$(go mod download 2>&1)
+          exit_status=$?
+          set -e
+          if [[ $exit_status -ne 0 ]]; then
+            if [[ $output != "go: no module dependencies to download" ]]; then
+              echo "$output" >&2
+              exit $exit_status
+            else
+              echo "No external dependencies found."
+            fi
+          else
+            echo $output
+          fi
 
       - name: Run golint
         if: matrix.go-version == '1.20'
