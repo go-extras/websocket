@@ -1,17 +1,13 @@
-# Gorilla WebSocket
+# Go-Extras WebSocket
 
 [![GoDoc](https://godoc.org/github.com/go-extras/websocket?status.svg)](https://godoc.org/github.com/go-extras/websocket)
-[![CircleCI](https://circleci.com/gh/gorilla/websocket.svg?style=svg)](https://circleci.com/gh/gorilla/websocket)
+[![Build Status](https://github.com/go-extras/websocket/actions/workflows/main.yml/badge.svg)](https://github.com/go-extras/websocket/actions/workflows/main.yml)
 
-Gorilla WebSocket is a [Go](http://golang.org/) implementation of the
-[WebSocket](http://www.rfc-editor.org/rfc/rfc6455.txt) protocol.
+Go-Extras WebSocket is a [Go](http://golang.org/) implementation of the
+[WebSocket](http://www.rfc-editor.org/rfc/rfc6455.txt) protocol. It is based on
+[Gorilla Websocket](https://github.com/gorilla/websocket), which was archived
+by its authors in Dec 2022.
 
-
----
-
-⚠️ **[The Gorilla WebSocket Package is looking for a new maintainer](https://github.com/go-extras/websocket/issues/370)**
-
----
 
 ### Documentation
 
@@ -23,7 +19,7 @@ Gorilla WebSocket is a [Go](http://golang.org/) implementation of the
 
 ### Status
 
-The Gorilla WebSocket package provides a complete and tested implementation of
+The Go-Extras WebSocket package provides a complete and tested implementation of
 the [WebSocket](http://www.rfc-editor.org/rfc/rfc6455.txt) protocol. The
 package API is stable.
 
@@ -33,7 +29,12 @@ package API is stable.
 
 ### Protocol Compliance
 
-The Gorilla WebSocket package passes the server tests in the [Autobahn Test
+The Go-Extras WebSocket package passes the server tests in the [Autobahn Test
 Suite](https://github.com/crossbario/autobahn-testsuite) using the application in the [examples/autobahn
 subdirectory](https://github.com/go-extras/websocket/tree/master/examples/autobahn).
 
+### Contribution
+Contributions are welcome! Please feel free to submit any issues or pull requests.
+
+### License
+This module is licensed under the BSD-2-Clause License. See the [LICENSE](LICENSE) file for details.
